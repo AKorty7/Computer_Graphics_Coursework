@@ -1,0 +1,19 @@
+# CMake generation dependency list for this directory.
+E:/Graphics Course work/external/glfw-3.1.2/CMakeLists.txt
+E:/Graphics Course work/external/glfw-3.1.2/cmake_uninstall.cmake.in
+E:/Graphics Course work/external/glfw-3.1.2/docs/Doxyfile.in
+E:/Graphics Course work/external/glfw-3.1.2/src/glfw3.pc.in
+E:/Graphics Course work/external/glfw-3.1.2/src/glfw3Config.cmake.in
+E:/Graphics Course work/external/glfw-3.1.2/src/glfw_config.h.in
+E:/share/cmake-3.31/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+E:/share/cmake-3.31/Modules/CMakePackageConfigHelpers.cmake
+E:/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake
+E:/share/cmake-3.31/Modules/CheckIncludeFile.cmake
+E:/share/cmake-3.31/Modules/CheckLibraryExists.cmake
+E:/share/cmake-3.31/Modules/FindDoxygen.cmake
+E:/share/cmake-3.31/Modules/FindOpenGL.cmake
+E:/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake
+E:/share/cmake-3.31/Modules/FindPackageMessage.cmake
+E:/share/cmake-3.31/Modules/FindThreads.cmake
+E:/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake
+E:/share/cmake-3.31/Modules/WriteBasicConfigVersionFile.cmake

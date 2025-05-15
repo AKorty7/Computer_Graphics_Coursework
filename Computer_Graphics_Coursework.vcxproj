@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C92A3964-D6D0-3177-BCA0-1F2FCBC20B96}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>Computer_Graphics_Coursework</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Graphics Course work\build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Computer_Graphics_Coursework.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Computer_Graphics_Coursework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Graphics Course work\build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Computer_Graphics_Coursework.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Computer_Graphics_Coursework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Graphics Course work\build\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Computer_Graphics_Coursework.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Computer_Graphics_Coursework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Graphics Course work\build\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Computer_Graphics_Coursework.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Computer_Graphics_Coursework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+E:\bin\cmake.exe -E copy "E:/Graphics Course work/build/$(Configuration)/Computer_Graphics_Coursework.exe" "E:/Graphics Course work/source/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;external\glfw-3.1.2\src\Debug\glfw3.lib;external\Debug\GLEW_1130.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Graphics Course work/build/Debug/Computer_Graphics_Coursework.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Graphics Course work/build/Debug/Computer_Graphics_Coursework.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+E:\bin\cmake.exe -E copy "E:/Graphics Course work/build/$(Configuration)/Computer_Graphics_Coursework.exe" "E:/Graphics Course work/source/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;external\glfw-3.1.2\src\Release\glfw3.lib;external\Release\GLEW_1130.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Graphics Course work/build/Release/Computer_Graphics_Coursework.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Graphics Course work/build/Release/Computer_Graphics_Coursework.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+E:\bin\cmake.exe -E copy "E:/Graphics Course work/build/$(Configuration)/Computer_Graphics_Coursework.exe" "E:/Graphics Course work/source/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;external\glfw-3.1.2\src\MinSizeRel\glfw3.lib;external\MinSizeRel\GLEW_1130.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Graphics Course work/build/MinSizeRel/Computer_Graphics_Coursework.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Graphics Course work/build/MinSizeRel/Computer_Graphics_Coursework.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <MinimalRebuild></MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SupportJustMyCode></SupportJustMyCode>
+      <UseFullPaths>false</UseFullPaths>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;TW_STATIC;TW_NO_LIB_PRAGMA;TW_NO_DIRECT3D;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\Graphics Course work\external\glfw-3.1.2\include;E:\Graphics Course work\external\glew-1.13.0\include;E:\Graphics Course work\external\glm-0.9.7.1;E:\Graphics Course work\.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+E:\bin\cmake.exe -E copy "E:/Graphics Course work/build/$(Configuration)/Computer_Graphics_Coursework.exe" "E:/Graphics Course work/source/"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;external\glfw-3.1.2\src\RelWithDebInfo\glfw3.lib;external\RelWithDebInfo\GLEW_1130.lib;opengl32.lib;glu32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/Graphics Course work/build/RelWithDebInfo/Computer_Graphics_Coursework.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/Graphics Course work/build/RelWithDebInfo/Computer_Graphics_Coursework.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\Graphics Course work\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/Graphics Course work/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+E:\bin\cmake.exe "-SE:/Graphics Course work" "-BE:/Graphics Course work/build" --check-stamp-file "E:/Graphics Course work/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeCCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeCXXCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeRCCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeSystem.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;E:\share\cmake-3.31\Modules\CMakeCInformation.cmake;E:\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;E:\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;E:\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;E:\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;E:\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;E:\share\cmake-3.31\Modules\CMakeRCInformation.cmake;E:\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;E:\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;E:\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC.cmake;E:\share\cmake-3.31\Modules\FindOpenGL.cmake;E:\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;E:\share\cmake-3.31\Modules\FindPackageMessage.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;E:\share\cmake-3.31\Modules\Platform\Windows.cmake;E:\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Graphics Course work\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/Graphics Course work/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+E:\bin\cmake.exe "-SE:/Graphics Course work" "-BE:/Graphics Course work/build" --check-stamp-file "E:/Graphics Course work/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeCCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeCXXCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeRCCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeSystem.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;E:\share\cmake-3.31\Modules\CMakeCInformation.cmake;E:\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;E:\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;E:\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;E:\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;E:\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;E:\share\cmake-3.31\Modules\CMakeRCInformation.cmake;E:\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;E:\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;E:\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC.cmake;E:\share\cmake-3.31\Modules\FindOpenGL.cmake;E:\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;E:\share\cmake-3.31\Modules\FindPackageMessage.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;E:\share\cmake-3.31\Modules\Platform\Windows.cmake;E:\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Graphics Course work\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/Graphics Course work/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+E:\bin\cmake.exe "-SE:/Graphics Course work" "-BE:/Graphics Course work/build" --check-stamp-file "E:/Graphics Course work/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeCCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeCXXCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeRCCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeSystem.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;E:\share\cmake-3.31\Modules\CMakeCInformation.cmake;E:\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;E:\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;E:\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;E:\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;E:\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;E:\share\cmake-3.31\Modules\CMakeRCInformation.cmake;E:\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;E:\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;E:\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC.cmake;E:\share\cmake-3.31\Modules\FindOpenGL.cmake;E:\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;E:\share\cmake-3.31\Modules\FindPackageMessage.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;E:\share\cmake-3.31\Modules\Platform\Windows.cmake;E:\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\Graphics Course work\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/Graphics Course work/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+E:\bin\cmake.exe "-SE:/Graphics Course work" "-BE:/Graphics Course work/build" --check-stamp-file "E:/Graphics Course work/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeCCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeCXXCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeRCCompiler.cmake;E:\Graphics Course work\build\CMakeFiles\3.31.7\CMakeSystem.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\CleanDirectoryList.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\CreateLaunchers.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\ListCombinations.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\MSVCMultipleProcessCompile.cmake;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\launcher-templates\targetlauncher.cmd.in;E:\Graphics Course work\external\rpavlik-cmake-modules-fe2273\launcher-templates\vcxproj.user.in;E:\share\cmake-3.31\Modules\CMakeCInformation.cmake;E:\share\cmake-3.31\Modules\CMakeCXXInformation.cmake;E:\share\cmake-3.31\Modules\CMakeCommonLanguageInclude.cmake;E:\share\cmake-3.31\Modules\CMakeGenericSystem.cmake;E:\share\cmake-3.31\Modules\CMakeInitializeConfigs.cmake;E:\share\cmake-3.31\Modules\CMakeLanguageInformation.cmake;E:\share\cmake-3.31\Modules\CMakeRCInformation.cmake;E:\share\cmake-3.31\Modules\CMakeSystemSpecificInformation.cmake;E:\share\cmake-3.31\Modules\CMakeSystemSpecificInitialize.cmake;E:\share\cmake-3.31\Modules\Compiler\CMakeCommonCompilerMacros.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC-C.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Compiler\MSVC.cmake;E:\share\cmake-3.31\Modules\FindOpenGL.cmake;E:\share\cmake-3.31\Modules\FindPackageHandleStandardArgs.cmake;E:\share\cmake-3.31\Modules\FindPackageMessage.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCXXLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Internal\CMakeCommonLinkerInformation.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-C.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Platform\Linker\Windows-MSVC.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-Initialize.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC-C.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC-CXX.cmake;E:\share\cmake-3.31\Modules\Platform\Windows-MSVC.cmake;E:\share\cmake-3.31\Modules\Platform\Windows.cmake;E:\share\cmake-3.31\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\Graphics Course work\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\Graphics Course work\source\coursework.cpp" />
+    <None Include="E:\Graphics Course work\source\vertexShader.glsl">
+    </None>
+    <None Include="E:\Graphics Course work\source\fragmentShader.glsl">
+    </None>
+    <ClInclude Include="E:\Graphics Course work\common\shader.hpp" />
+    <ClInclude Include="E:\Graphics Course work\common\texture.hpp" />
+    <ClInclude Include="E:\Graphics Course work\common\stb_image.hpp" />
+    <ClInclude Include="E:\Graphics Course work\common\maths.hpp" />
+    <ClCompile Include="E:\Graphics Course work\common\maths.cpp" />
+    <ClInclude Include="E:\Graphics Course work\common\camera.hpp" />
+    <ClCompile Include="E:\Graphics Course work\common\camera.cpp" />
+    <ClInclude Include="E:\Graphics Course work\common\model.hpp" />
+    <ClCompile Include="E:\Graphics Course work\common\model.cpp" />
+    <ClInclude Include="E:\Graphics Course work\common\light.hpp" />
+    <ClCompile Include="E:\Graphics Course work\common\light.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="E:\Graphics Course work\build\ZERO_CHECK.vcxproj">
+      <Project>{C712DBB8-5106-3D3F-8961-006AACAC1785}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="E:\Graphics Course work\build\external\GLEW_1130.vcxproj">
+      <Project>{66D0514D-A373-3CB3-B935-1CD1A0EC077C}</Project>
+      <Name>GLEW_1130</Name>
+    </ProjectReference>
+    <ProjectReference Include="E:\Graphics Course work\build\external\glfw-3.1.2\src\glfw.vcxproj">
+      <Project>{2D156FAC-7F1C-3917-8F71-E86B39137773}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
