@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.10)
+project(Computer_Graphics_Coursework)
+
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(OpenGL REQUIRED)
+find_package(GLEW REQUIRED)
+find_package(glfw3 3.1.2 REQUIRED)
+find_package(glm REQUIRED)
+
+include_directories(${OPENGL_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS} ${GLM_INCLUDE_DIRS} src common)
+
+add_executable(Computer_Graphics_Coursework 
+    src/coursework.cpp 
+    src/scene.cpp
+    src/shader.cpp
+)
+
+target_link_libraries(Computer_Graphics_Coursework ${OPENGL_LIBRARIES} ${GLEW_LIBRARIES} glfw glm)
