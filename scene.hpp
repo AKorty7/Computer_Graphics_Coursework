@@ -24,4 +24,4 @@ public:
     void render(GLuint shaderProgram);
 };
 
-#endif
+#endif //
