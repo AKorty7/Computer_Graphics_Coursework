@@ -9,10 +9,10 @@ find_package(GLEW REQUIRED)
 find_package(glfw3 3.1.2 REQUIRED)
 find_package(glm REQUIRED)
 
-include_directories(${OPENGL_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS} ${GLM_INCLUDE_DIRS} src common)
+include_directories(${OPENGL_INCLUDE_DIRS} ${GLEW_INCLUDE_DIRS} ${GLFW_INCLUDE_DIRS} ${GLM_INCLUDE_DIRS} source common)
 
 add_executable(Computer_Graphics_Coursework 
-    src/coursework.cpp 
+    source/coursework.cpp 
     src/scene.cpp
     src/shader.cpp
 )
