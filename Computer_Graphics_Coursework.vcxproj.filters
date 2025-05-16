@@ -16,6 +16,9 @@
     <ClCompile Include="E:\Graphics Course work\common\light.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="E:\Graphics Course work\common\shader.hpp">
@@ -39,6 +42,10 @@
     <ClInclude Include="E:\Graphics Course work\common\light.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="scene.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="E:\Graphics Course work\CMakeLists.txt" />
@@ -54,5 +61,8 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{7E9F04BC-932D-3593-94C9-8739DA470E23}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Computer_Graphics_Coursework.rc" />
   </ItemGroup>
 </Project>
