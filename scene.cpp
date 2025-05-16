@@ -9,10 +9,13 @@ Scene::Scene() {
 Scene::~Scene() {
     glDeleteVertexArrays(1, &groundVAO);
     glDeleteBuffers(1, &groundVBO);
+    glDeleteBuffers(1, &groundEBO);
     glDeleteVertexArrays(1, &benchVAO);
     glDeleteBuffers(1, &benchVBO);
+    glDeleteBuffers(1, &benchEBO);
     glDeleteVertexArrays(1, &treeVAO);
     glDeleteBuffers(1, &treeVBO);
+    glDeleteBuffers(1, &treeEBO);
 }
 
 void Scene::initGround() {
@@ -30,9 +33,12 @@ void Scene::initGround() {
 
     glGenVertexArrays(1, &groundVAO);
     glGenBuffers(1, &groundVBO);
+    glGenBuffers(1, &groundEBO);
     glBindVertexArray(groundVAO);
     glBindBuffer(GL_ARRAY_BUFFER, groundVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, groundEBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
@@ -41,8 +47,6 @@ void Scene::initGround() {
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
     glEnableVertexAttribArray(2);
 
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, glGenBuffers(1));
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
     glBindVertexArray(0);
 }
 
@@ -53,7 +57,6 @@ void Scene::initBenches() {
          0.5f, -0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 0.0f,
          0.5f,  0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 1.0f, 1.0f,
         -0.5f,  0.5f, -0.5f, 0.0f, 0.0f, -1.0f, 0.0f, 1.0f,
-        // ... (remaining cube vertices for 6 faces)
         -0.5f, -0.5f,  0.5f, 0.0f, 0.0f,  1.0f, 0.0f, 0.0f,
          0.5f, -0.5f,  0.5f, 0.0f, 0.0f,  1.0f, 1.0f, 0.0f,
          0.5f,  0.5f,  0.5f, 0.0f, 0.0f,  1.0f, 1.0f, 1.0f,
@@ -86,9 +89,12 @@ void Scene::initBenches() {
 
     glGenVertexArrays(1, &benchVAO);
     glGenBuffers(1, &benchVBO);
+    glGenBuffers(1, &benchEBO);
     glBindVertexArray(benchVAO);
     glBindBuffer(GL_ARRAY_BUFFER, benchVBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, benchEBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
@@ -97,8 +103,6 @@ void Scene::initBenches() {
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
     glEnableVertexAttribArray(2);
 
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, glGenBuffers(1));
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
     glBindVertexArray(0);
 
     benchModels.push_back(glm::translate(glm::mat4(1.0f), glm::vec3(-2.0f, 0.5f, -2.0f)));
@@ -153,9 +157,12 @@ void Scene::initTrees() {
 
     glGenVertexArrays(1, &treeVAO);
     glGenBuffers(1, &treeVBO);
+    glGenBuffers(1, &treeEBO);
     glBindVertexArray(treeVAO);
     glBindBuffer(GL_ARRAY_BUFFER, treeVBO);
     glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(float), vertices.data(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, treeEBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
 
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
@@ -164,35 +171,40 @@ void Scene::initTrees() {
     glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
     glEnableVertexAttribArray(2);
 
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, glGenBuffers(1));
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), indices.data(), GL_STATIC_DRAW);
     glBindVertexArray(0);
 
     treeModels.push_back(glm::translate(glm::mat4(1.0f), glm::vec3(3.0f, 0.0f, -3.0f)));
     treeModels.push_back(glm::translate(glm::mat4(1.0f), glm::vec3(-3.0f, 0.0f, 3.0f)));
 }
 
-void Scene::render(Shader& shader) {
+void Scene::render(GLuint shaderProgram) {
+    glUseProgram(shaderProgram);
+
+    // Set uniforms
+    GLint modelLoc = glGetUniformLocation(shaderProgram, "model");
+    GLint isGroundLoc = glGetUniformLocation(shaderProgram, "isGround");
+
     // Render ground
     glBindVertexArray(groundVAO);
     glm::mat4 model = glm::mat4(1.0f);
-    shader.setMat4("model", model);
-    shader.setBool("isGround", true);
+    glUniformMatrix4fv(modelLoc, 1, GL_FALSE, &model[0][0]);
+    glUniform1i(isGroundLoc, 1);
     glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 
     // Render benches
-    shader.setBool("isGround", false);
+    glUniform1i(isGroundLoc, 0);
     glBindVertexArray(benchVAO);
     for (const auto& benchModel : benchModels) {
-        shader.setMat4("model", benchModel);
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, &benchModel[0][0]);
         glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
     }
 
     // Render trees
     glBindVertexArray(treeVAO);
     for (const auto& treeModel : treeModels) {
-        shader.setMat4("model", treeModel);
+        glUniformMatrix4fv(modelLoc, 1, GL_FALSE, &treeModel[0][0]);
         glDrawElements(GL_TRIANGLES, 6 * 20 * 20, GL_UNSIGNED_INT, 0);
     }
+
     glBindVertexArray(0);
 }

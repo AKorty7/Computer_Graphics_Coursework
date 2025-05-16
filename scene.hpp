@@ -4,15 +4,13 @@
 #include <GL/glew.h>
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include <common/shader.hpp>
-#include <common/maths.hpp>
 #include <vector>
 
 class Scene {
 private:
-    GLuint groundVAO, groundVBO;
-    GLuint benchVAO, benchVBO;
-    GLuint treeVAO, treeVBO;
+    GLuint groundVAO, groundVBO, groundEBO;
+    GLuint benchVAO, benchVBO, benchEBO;
+    GLuint treeVAO, treeVBO, treeEBO;
     std::vector<glm::mat4> benchModels;
     std::vector<glm::mat4> treeModels;
 
@@ -23,7 +21,7 @@ private:
 public:
     Scene();
     ~Scene();
-    void render(Shader& shader);
+    void render(GLuint shaderProgram);
 };
 
 #endif
